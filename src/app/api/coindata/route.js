@@ -9,7 +9,7 @@ export async function GET(req) {
   const days = searchParams.get("days") || "30";
 
   try {
-    const validDays = ["1", "7", "14", "30", "90", "180", "365", "max"];
+    const validDays = ["1", "7",  "30", "90",  "365", ];
     if (!validDays.includes(days)) {
       const errorResponse = { 
         error: "Parámetro 'days' inválido. Valores permitidos: " + validDays.join(", ") 
