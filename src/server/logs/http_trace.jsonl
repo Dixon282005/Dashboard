@@ -66,3 +66,9 @@
 {"ts":"2025-09-08T09:41:19.881Z","endpoint":"/api/coindata","coin":"wrapped-bitcoin","days":"30","status":200,"duration_ms":1373,"data_points":721}
 {"ts":"2025-09-08T09:46:50.178Z","endpoint":"/api/coindata","coin":"bitcoin","days":"30","status":200,"duration_ms":143,"data_points":721}
 {"ts":"2025-09-08T09:46:50.264Z","endpoint":"/api/data","coin":"bitcoin","days":"30","status":200,"duration_ms":31,"coins_returned":50}
+{"ts":"2025-09-08T09:55:03.494Z","endpoint":"/api/coindata","coin":"solana","days":"30","status":200,"duration_ms":161,"data_points":721}
+{"ts":"2025-09-08T09:55:03.663Z","endpoint":"/api/data","coin":"solana","days":"30","status":200,"duration_ms":86,"coins_returned":50}
+{"ts":"2025-09-08T09:55:08.277Z","endpoint":"/api/coindata","coin":"solana","days":"90","status":200,"duration_ms":718,"data_points":2161}
+{"ts":"2025-09-08T09:55:08.334Z","endpoint":"/api/data","coin":"solana","days":"90","status":200,"duration_ms":764,"coins_returned":50}
+{"ts":"2025-09-08T09:55:24.030Z","endpoint":"/api/coindata","coin":"bitcoin","days":"30","status":200,"duration_ms":105,"data_points":721}
+{"ts":"2025-09-08T09:55:24.100Z","endpoint":"/api/data","coin":"bitcoin","days":"30","status":200,"duration_ms":28,"coins_returned":50}
