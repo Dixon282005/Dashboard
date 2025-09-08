@@ -1,0 +1,14 @@
+{"ts":"2025-09-08T08:36:50.593Z","endpoint":"/api/data","coin":"bitcoin","days":"30","status":200,"duration_ms":1238,"coins_returned":50}
+{"ts":"2025-09-08T08:37:20.619Z","endpoint":"/api/data","coin":"solana","days":"30","status":200,"duration_ms":891,"coins_returned":50}
+{"ts":"2025-09-08T08:37:27.130Z","endpoint":"/api/data","coin":"bnb","days":"30","status":200,"duration_ms":619,"coins_returned":50}
+{"ts":"2025-09-08T08:37:37.137Z","endpoint":"/api/data","coin":"bincancecoin","days":"30","status":200,"duration_ms":722,"coins_returned":50}
+{"ts":"2025-09-08T08:37:45.733Z","endpoint":"/api/data","coin":"binancecoin","days":"30","status":200,"duration_ms":854,"coins_returned":50}
+{"ts":"2025-09-08T08:37:51.932Z","endpoint":"/api/data","coin":"tether","days":"30","status":200,"duration_ms":887,"coins_returned":50}
+{"ts":"2025-09-08T08:37:58.520Z","endpoint":"/api/data","coin":"solana","days":"30","status":200,"duration_ms":6,"coins_returned":50}
+{"ts":"2025-09-08T08:38:31.358Z","endpoint":"/api/coindata","coin":"solana","days":"30","status":200,"duration_ms":842,"data_points":721}
+{"ts":"2025-09-08T08:38:40.478Z","endpoint":"/api/coindata","coin":"bnb","days":"30","status":404,"duration_ms":609,"message":"Criptomoneda 'bnb' no encontrada"}
+{"ts":"2025-09-08T08:39:05.490Z","endpoint":"/api/coindata","coin":"tether","days":"30","status":200,"duration_ms":792,"data_points":721}
+{"ts":"2025-09-08T08:39:12.502Z","endpoint":"/api/coindata","coin":"tether","days":"14","status":200,"duration_ms":807,"data_points":336}
+{"ts":"2025-09-08T08:39:18.187Z","endpoint":"/api/coindata","coin":"tether","days":"7","status":200,"duration_ms":630,"data_points":168}
+{"ts":"2025-09-08T08:49:42.606Z","endpoint":"/api/data","coin":"bitcoin","days":"30","status":200,"duration_ms":74,"coins_returned":50}
+{"ts":"2025-09-08T08:49:43.687Z","endpoint":"/api/coindata","coin":"bitcoin","days":"30","status":200,"duration_ms":1181,"data_points":721}

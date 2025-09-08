@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { logTrace } from "@/server/utils/logTrace";
+import { sendWebhook } from "@/server/utils/sendWebhook";
 
 export async function GET(req) {
   const start = Date.now();
@@ -7,13 +9,21 @@ export async function GET(req) {
   const days = searchParams.get("days") || "30";
 
   try {
-    const validDays = ["1", "7",  "30", "90",  "365"];
+    const validDays = ["1", "7", "14", "30", "90", "180", "365", "max"];
     if (!validDays.includes(days)) {
       const errorResponse = { 
         error: "Parámetro 'days' inválido. Valores permitidos: " + validDays.join(", ") 
       };
 
-     
+      logTrace({
+        ts: new Date().toISOString(),
+        endpoint: "/api/coindata",
+        coin,
+        days,
+        status: 400,
+        duration_ms: Date.now() - start,
+        message: errorResponse.error
+      });
 
       return NextResponse.json(errorResponse, { status: 400 });
     }
@@ -59,14 +69,39 @@ export async function GET(req) {
       timestamp: new Date().toISOString()
     };
 
-    
+    logTrace({
+      ts: new Date().toISOString(),
+      endpoint: "/api/coindata",
+      coin,
+      days,
+      status: 200,
+      duration_ms: Date.now() - start,
+      data_points: response.data_points
+    });
 
     return NextResponse.json(response);
 
   } catch (err) {
     console.error("Error in /api/coindata:", err);
 
-    
+    logTrace({
+      ts: new Date().toISOString(),
+      endpoint: "/api/coindata",
+      coin,
+      days,
+      status: 500,
+      duration_ms: Date.now() - start,
+      error: err.message
+    });
+
+    // Enviar traza al webhook
+    await sendWebhook({
+      event: "fetch_coin_data_error",
+      coin,
+      days,
+      ts: new Date().toISOString(),
+      error: err.message
+    });
 
     return NextResponse.json({
       error: "Error al obtener datos históricos",
